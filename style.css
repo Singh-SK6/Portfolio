@@ -1,0 +1,90 @@
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI, sans-serif}
+body{color:white;overflow-x:hidden;background:#0b0b0b}
+
+/* NAV */
+nav{
+position:fixed;top:0;width:100%;
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 8%;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav a{color:white;text-decoration:none;margin-left:22px;font-weight:500}
+
+/* SECTION */
+section{
+padding:120px 10%;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+position:relative;
+overflow:hidden;
+}
+
+/* Animated cinematic background */
+.bg{
+position:absolute;
+top:0;left:0;
+width:110%;height:110%;
+background-size:cover;
+background-position:center;
+filter:brightness(0.35) blur(3px);
+animation:kenburns 18s ease-in-out infinite alternate;
+z-index:-1;
+}
+
+@keyframes kenburns{
+0%{transform:scale(1) translate(0,0)}
+50%{transform:scale(1.08) translate(-2%, -2%)}
+100%{transform:scale(1.12) translate(2%, 2%)}
+}
+
+/* Glass panel */
+.panel{
+background:rgba(15,15,15,0.75);
+backdrop-filter:blur(12px);
+padding:50px;
+border-radius:16px;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* Hero */
+.hero{text-align:center}
+.hero h1{font-size:70px;letter-spacing:3px}
+.hero p{font-size:22px;margin-top:10px}
+
+/* Profile */
+.profile{display:flex;flex-wrap:wrap;align-items:center;gap:60px;margin-top:30px}
+.profile img{width:260px;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.7)}
+
+/* Leadership */
+.lead-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:30px}
+.lead-card{background:rgba(25,25,25,0.9);padding:20px;border-radius:12px}
+
+/* Showreel */
+.showreel iframe{width:100%;height:420px;border-radius:12px;border:none;margin-top:20px}
+
+/* YouTube */
+.youtube-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;margin-top:35px}
+.youtube-grid iframe{width:100%;height:200px;border-radius:10px;border:none}
+
+/* Software */
+.software-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;margin-top:30px}
+.software{background:rgba(30,30,30,0.9);padding:16px;border-radius:10px;text-align:center}
+
+/* Contact */
+.contact input,.contact textarea{
+width:100%;padding:14px;margin-top:12px;border:none;border-radius:6px;
+background:rgba(30,30,30,0.9);color:white;
+}
+.contact button{
+margin-top:14px;padding:12px 24px;border:none;background:#ff2c6d;
+color:white;border-radius:30px;cursor:pointer;
+}
+.contact-details{margin-top:30px;line-height:1.8}
+
+footer{text-align:center;padding:35px;background:#050505}
